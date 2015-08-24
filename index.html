@@ -151,11 +151,11 @@ b.ben.works(); %&gt;
 
 Ben goes to work.
 
+Ben works.
+
+&lt;% if (b.gameTime.getHours() &gt; 8 &amp;&amp; b.gameTime.getHours() &lt; 17) { %&gt;Ben has a lunch break.&lt;% } else { %&gt;Ben goes home.&lt;% } %&gt;
+
 &lt;% if (b.gameTime.getHours() &lt; 22) { %&gt;Ben is &lt;% print(b.ben.hunger()); %&gt;.&lt;% } %&gt;
-
-&lt;% if (b.gameTime.getHours() &gt; 8 &amp;&amp; b.gameTime.getHours() &lt; 17) { %&gt;Ben has a lunch break.&lt;% } %&gt;
-
-&lt;% if (b.gameTime.getHours() &lt;= 8 &amp;&amp; b.gameTime.getHours() &gt;= 17) { %&gt;Ben goes home.&lt;% } %&gt;
 
 &lt;% if (b.gameTime.getDay() &gt; 0 &amp;&amp; b.gameTime.getDay() &lt; 6 &amp;&amp; b.gameTime.getHours() &gt; 8 &amp;&amp; b.gameTime.getHours() &lt; 17) { %&gt;[[Ben goes back to work.-&gt;Ben goes to work.]]&lt;% } %&gt;
 
