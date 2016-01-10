@@ -5,7 +5,7 @@ var b = document.beb;
 
 b.calculateAge = function(birthdate, date) {
 	date ? date : date = Date.now();
-	var ageDifMs = date - birthdate.getTime();
+	var ageDifMs = date.getTime() - birthdate.getTime();
 	var ageDate = new Date(ageDifMs);
 	return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
@@ -20,7 +20,7 @@ b.addMinutes = function(minutes,burnMultiplier) {
 
 b.ben = {
   age: function() {
-  	return b.calculateAge(new Date(1985, 1, 10), b.gameTime);
+  	return b.calculateAge(new Date('1985-01-9'), b.gameTime);
   },
 	calories: 1000,
 	money: 50,
